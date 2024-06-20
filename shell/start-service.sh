@@ -8,7 +8,7 @@ else
     echo "installation of Jarvis-personal-assistant service successful"
 fi
 
-cd Jarvis-personal-assistant/service/
+cd Jarvis-personal-mine/service/
 echo "preparing to execute service .."
 go run main.go &
 echo "successfully executed the service"
