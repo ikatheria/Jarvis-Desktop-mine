@@ -13,15 +13,15 @@ if [[ ${platform} == *_RedHat_* ]]; then
     go env GOPATH
 elif [[ ${platform} == *_Debian_* ]]; then
     # untested
-    wget https://storage.googleapis.com/golang/go1.4.2.linux-amd64.tar.gz
-    tar -C /usr/local -xzf go1.4.2.linux-amd64.tar.gz
-    rm go1.4.2.linux-amd64.tar.gz
+    wget https://go.dev/dl/go1.22.4.linux-amd64.tar.gz
+    tar -C /usr/local -xzf go1.22.4.linux-amd64.tar.gz
+    rm go1.22.4.linux-amd64.tar.gz
     mkdir $HOME/go
     echo 'export GOPATH=$HOME/go'
     echo 'PATH=$PATH:/usr/local/go/bin:$GOPATH/bin'
     source $HOME/.bashrc
 
-    apt-get install nodejs-legacy npm -y
+    apt-get install nodejs npm -y
 
 # provide support for other platforms as well
 fi
