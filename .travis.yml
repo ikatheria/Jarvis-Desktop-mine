@@ -10,13 +10,13 @@ services:
 language: node_js
 
 node_js:
-  -  "7"
+  -  "20.15.0"
 
 before_script:
   - npm install -g npm@latest
   - npm install --dev
   - npm install
-  - npm install -g eslint electron electron-packager
+  - npm install -g eslint electron @electron/packager
   
 script:
   - eslint app/*.js app/scripts/*.js
